@@ -139,7 +139,9 @@ public class TankWorld extends World
         }
         else
         {
+            removeObjects(getObjects(null));
             addObject(winText,300, 50);
+            Greenfoot.stop();
         }
     }
 
