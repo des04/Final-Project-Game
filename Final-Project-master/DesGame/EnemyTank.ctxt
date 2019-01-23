@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=EnemyTank
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ EnemyTank\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ EnemyTank\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ checkInteraction()
+comment2.text=\r\n\ checkInteraction\ checks\ to\ see\ what\ the\ enemy\ tank\ is\ interacting\ with\r\n\ and\ tells\ it\ what\ to\ do\ based\ off\ of\ that\ information.\ It\ also\ makes\r\n\ the\ enemy\ tank\ turn\ towards\ the\ player's\ tank\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+comment3.params=
+comment3.target=void\ checkDeath()
+comment3.text=\r\n\ checkDeath\ checks\ to\ see\ if\ the\ enemy\ tank's\ health\ reached\ zero\r\n\ and\ displays\ an\ exploding\ image\ before\ being\ removing\ the\ enemy\ tank\r\n\ from\ the\ world\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+comment4.params=
+comment4.target=void\ shoot()
+comment4.text=\r\n\ shoot\ adds\ an\ enemyBullet\ that\ will\ shoot\ out\ away\ from\ where\ the\r\n\ enemy\ tank\ is\ facing.\ shoot\ also\ sets\ the\ enemy\ reload\ time\ back\ up\r\n\ to\ full\ after\ a\ shot\ is\ taken\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+numComments=5

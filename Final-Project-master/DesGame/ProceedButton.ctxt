@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=ProceedButton
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ ProceedButton\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=ProceedButton()
+comment1.text=\r\n\ The\ constructor\ for\ the\ ProceedButton\ class\ (it\ scales\ down\ the\ image\r\n\ for\ the\ proceed\ button)\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+numComments=2

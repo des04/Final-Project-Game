@@ -1,0 +1,166 @@
+import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.List;
+/**
+ * Write a description of class TankWorld here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class TankWorld extends World
+{
+    private Tanky tankSelect[] = {new Tanky(), new OG_Tank(), new EpicTank()};
+    private Tanky tanky;
+    private ProceedButton proceedButton = new ProceedButton();
+    private int lvl = 0;
+    private boolean lvlMustChange = true;
+    private TankSimulatorText text = new TankSimulatorText ("TANK SIMULATOR", 44, true, Color.BLUE, Color.GREEN);
+    private UpgradeButton upgradeButton = new UpgradeButton ("UPGRADE TANK", "Cost: 100$", 18, Color.BLUE, Color.GREEN, Color.BLUE, Color.GREEN, new FileCommands());
+    private int tankUpgradeNum = 0;
+    private Score money = new Score("Money: ", 30, true, Color.BLUE, Color.GREEN);
+    private Wall wall = new Wall();
+    /**
+     * Constructor for objects of class TankWorld.
+     * 
+     */
+    public TankWorld()
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(600, 400, 1); 
+        addObject(money, 77, 12);
+    }
+    
+    
+    public void act()
+    {
+        if( lvlMustChange == true )
+        {
+            setLevel();
+            
+        }
+        else
+        {
+            checkWin();
+            
+        }
+    }
+    
+    private void scoreAnimation(int moneyReceived)
+    {
+        for (int i = 0; i <= moneyReceived; i ++)
+        {
+            update();
+            addObject(money, 57, 12);
+            Greenfoot.delay(1);
+        }
+    }
+    
+    public void update()
+    {
+        money.addToScore();
+    }
+    
+    private void setLevel()
+    {
+        if (lvl == 0 || lvl == 2 || lvl == 4)
+        {
+            addMenuObjects();
+            lvlMustChange = true;
+            if (Greenfoot.mouseClicked(proceedButton))
+            {
+                lvl ++;
+            }
+        }
+        else if (lvl == 1)
+        {
+            addLevelOneObjects();
+            lvlMustChange = false;
+        }
+        else if (lvl == 3)
+        {
+            addLevelTwoObjects();
+            lvlMustChange = false;
+        }
+        else
+        {
+            addLevelThreeObjects();
+            lvlMustChange = false;
+        }
+    }
+    private void checkWin()
+    {
+        if (getObjects(EnemyTank.class).size() == 0)
+        {
+            lvl++;
+            lvlMustChange = true;
+            scoreAnimation(100);
+        }
+    }
+    private void addMenuObjects()
+    {     
+        addObject(text, 300,50);
+        addObject(upgradeButton, getWidth()/2, getHeight()/2);
+        addObject(proceedButton, getWidth()-100, getHeight()-100);
+    }
+    private void removeMenuObjects()
+    {
+        List one = getObjects(TankSimulatorText.class);
+        removeObjects(one);
+        List two = getObjects(ProceedButton.class);
+        removeObjects(two);
+        List three = getObjects(UpgradeButton.class);
+        removeObjects(one);
+    }
+    private void addWalls(int wallAmmount)
+    {
+        for (int i = 0; i < wallAmmount; i++)
+        {
+            addObject(wall, Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+            
+        }
+        
+    }
+    private void addLevelOneObjects()
+    {
+        removeMenuObjects();
+        
+        tanky = tankSelect[0];
+        
+        
+        addObject( tanky, getWidth()/2, getHeight()/2);
+        addObject( new EnemyTank(), Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+        addWalls(4);
+    }
+    private void addLevelTwoObjects()
+    {
+        removeMenuObjects();
+        
+        tanky = tankSelect[tankUpgradeNum];
+        
+        
+        addObject( tanky, getWidth()/2, getHeight()/2 );
+        addObject( new EnemyTank(), Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+        addObject( new EnemyTank(), Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+        addObject( new EnemyTank(), Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+        addWalls(3);
+    }
+    private void addLevelThreeObjects()
+    {
+        removeMenuObjects();
+        
+        
+        addObject( tankSelect[tankUpgradeNum], getWidth()/2, getHeight()/2 );
+        addObject( new EnemyTank(), Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+        addObject( new EnemyTank(), Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+        addObject( new EnemyTank(), Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+        addObject( new EnemyTank(), Greenfoot.getRandomNumber(getWidth()),Greenfoot.getRandomNumber(getHeight()));
+        addWalls(2);
+    }
+    private void checkLevelWin()
+    {
+        lvlMustChange = true;
+    }
+    public Tanky getTanky()
+    {
+        return tanky;
+    }
+}

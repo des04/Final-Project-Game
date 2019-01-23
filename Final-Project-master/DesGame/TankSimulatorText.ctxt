@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=TankSimulatorText
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ TankSimulatorText\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=message\ size\ isBordered\ fg\ bg
+comment1.target=TankSimulatorText(java.lang.String,\ int,\ boolean,\ greenfoot.Color,\ greenfoot.Color)
+comment1.text=\r\n\ The\ constructor\ for\ the\ TankSimulatorText\ class\r\n\ \r\n\ @param\ String\ message\ represents\ the\ message\ that\ will\ be\ written\ in\ the\ text\ box\r\n\ @param\ int\ size\ represents\ the\ font\ size\ \ of\ the\ message\ that\ will\ be\ written\ in\ the\ text\ box\r\n\ @param\ boolean\ isBordered\ represents\ whether\ or\ not\ there\ is\ a\ border\ on\ the\ text\ box\r\n\ @param\ Color\ fg\ represents\ the\ foreground\ color\ of\ the\ text\ box\r\n\ @param\ Color\ bg\ represents\ the\ background\ color\ of\ the\ text\ box\r\n
+comment2.params=
+comment2.target=void\ display()
+comment2.text=\r\n\ display\ creates\ the\ textbox\ by\ combining\ all\ of\ the\ previously\ \r\n\ mentioned\ varibles\ within\ a\ rectangle\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+comment3.params=message
+comment3.target=void\ setText(java.lang.String)
+comment3.text=\r\n\ setText\ updates\ the\ text\ of\ the\ text\ box\r\n\ \r\n\ @param\ String\ message\ which\ represents\ the\ message\ in\ the\ text\ box\r\n\ @return\ Nothing\ is\ returned\r\n
+numComments=4

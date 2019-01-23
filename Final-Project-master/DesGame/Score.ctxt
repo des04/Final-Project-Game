@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Score
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Score\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Score()
+comment1.text=\r\n\ The\ constructor\ for\ the\ Score\ class\ (it\ draws\ a\ string\ in\ the\ top\ left\r\n\ corner\ of\ the\ screen\ showing\ the\ ammount\ of\ money\ the\ player\ has)\r\n
+comment2.params=
+comment2.target=void\ addToScore()
+comment2.text=\r\n\ addToScore\ adds\ to\ the\ ammount\ of\ money\ the\ player\ has\ by\ adding\ to\ the\r\n\ money\ variable\ and\ updating\ the\ string\ shown\ in\ the\ top\ left\ corner\r\n\ of\ the\ screen\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+comment3.params=
+comment3.target=void\ subtractFromScore()
+comment3.text=\r\n\ subtractFromScore\ subtracts\ from\ the\ ammount\ of\ money\ the\ player\ has\ \r\n\ by\ subtracting\ from\ the\ money\ variable\ and\ updating\ the\ string\ shown\r\n\ in\ the\ top\ left\ corner\ of\ the\ screen\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+comment4.params=
+comment4.target=int\ getMoney()
+comment4.text=\r\n\ getMoney\ gets\ the\ ammount\ of\ money\ that\ the\ player\ currently\ has\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ int\ money\ (which\ represents)\ the\ ammount\ of\ money\ the\ player\r\n\ currently\ has\r\n
+numComments=5
