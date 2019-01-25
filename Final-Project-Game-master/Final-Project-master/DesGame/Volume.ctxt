@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Volume
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Volume\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Volume\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=Volume()
+comment2.text=\r\n\ This\ is\ the\ constructor\ for\ the\ volume\ class\ (it\ sets\ the\ volume\ on\r\n\ image\ and\ scales\ it.\ It\ also\ automatically\ plays\ the\ soundtrack)\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+comment3.params=
+comment3.target=void\ checkClicked()
+comment3.text=\r\n\ checkClicked\ plays\ music\ if\ the\ player\ clicked\ on\ the\ sound\ icon\r\n\ and\ the\ soundtrack\ wasn't\ already\ playing\ and\ does\ the\ reverse\ when\r\n\ the\ soundtrack\ isn't\ playing.\r\n\ \r\n\ @param\ None\ There\ are\ no\ parameters\r\n\ @return\ Nothing\ is\ returned\r\n
+numComments=4
